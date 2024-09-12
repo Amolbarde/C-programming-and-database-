@@ -1,0 +1,24 @@
+import java.io.*;
+class File
+{
+    public static void main(String abc[])
+    {
+        try{
+            FileInputStream f1=new FileInputStream("emp.java");
+            int k;
+            while(true)
+            {
+                k=f1.read();
+            if(k==-1)
+                break;
+            System.out.println((char)k);
+                
+        }
+            f1.close();
+    }
+        catch(Exception e)
+        {
+            System.out.println("error="+e);
+        }
+    }
+}
